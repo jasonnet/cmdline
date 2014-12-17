@@ -49,8 +49,8 @@
       <repository>
           <id>jasonnetorg_snapshots</id>
           <url>http://maven.jasonnet.org/maven-repository/maven.jasonnet.org/snapshots/</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>false</enabled></snapshots>
+          <releases><enabled>false</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
       </repository>
   </repositories>
 -->
