@@ -38,11 +38,34 @@
     </developer>
   </developers>
 
+<!--- dependent pom.xml files will neeed this:
+  <repositories>
+      <repository>
+          <id>jasonnetorg_releases</id>
+          <url>http://maven.jasonnet.org/maven-repository/maven.jasonnet.org/releases/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+      </repository>
+      <repository>
+          <id>jasonnetorg_snapshots</id>
+          <url>http://maven.jasonnet.org/maven-repository/maven.jasonnet.org/snapshots/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+      </repository>
+  </repositories>
+-->
   <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <build>
+      <extensions>
+          <extension>
+              <groupId>org.apache.maven.wagon</groupId>
+              <artifactId>wagon-ssh-external</artifactId>
+              <version>2.6</version>
+          </extension>
+      </extensions>
       <plugins>
 	<!--plugin>
 	  <groupId>com.github.github</groupId>
@@ -168,6 +191,18 @@
       </plugins>
   </build>
 
+  <distributionManagement>
+      <repository>
+          <id>maven.jasonnetorg.releases</id><!-- will need ~/.ssh/id_rsa* support and ~/.m2/setting.xml should specify the mavenuser account for this to work -->
+          <name>jasonnet.org release repositories</name>
+          <url>scpexe://maven.jasonnet.org/maven-repository/maven.jasonnet.org/releases/</url>
+      </repository>
+      <snapshotRepository>
+          <id>maven.jasonnetorg.snapshots</id><!-- will need ~/.ssh/id_rsa* support and ~/.m2/setting.xml should specify the mavenuser account for this to work -->
+          <name>jasonnet.org snapshot repositories</name>
+          <url>scpexe://maven.jasonnet.org/maven-repository/maven.jasonnet.org/snapshots/</url>
+      </snapshotRepository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
