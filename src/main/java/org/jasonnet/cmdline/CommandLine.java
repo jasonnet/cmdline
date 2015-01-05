@@ -14,7 +14,7 @@ import java.util.LinkedList;
  * <code>---xx... </code>       a commented out named flag 
  * <code>--key value </code>    a key value pair 
  * <code>--xxkey value</code>   a commented out key value pair 
- * <code>-a</code> (or <code>-abc</code>) single-letter flag(s)
+ * <code>-a</code> (or <code>-abc</code>)    one (or more) single-letter flag(s) 
  * </pre>
  *
  * Everything else is an position-sensitive parameter.
@@ -49,9 +49,9 @@ public class CommandLine {
      * null is also acceptable in which case the
      * parameter value at that position is not
      * assigned to the mapOptions array. If a
-     * value in this array is equal to
+     * value in this array is equal to the
      * NAME_TOOMANYARGUMENTS static value pointer
-     * and positional parameter value is found for
+     * and a positional parameter value is found for
      * that position, then an ArrayIndexOutOfBounds
      * exception is thrown. This should only be
      * passed in if there is a known maximum number
@@ -62,7 +62,8 @@ public class CommandLine {
      * not be added to the mapOptions params.
      *
      * @return String[] and ordered sequence of found positional
-     * parameters.
+     * parameters.  Some of these might also be named if the caller 
+     * pass a argnames parameter. 
      */
     public static String[] parse_command_args( String args[], Map<String,String> mapOptions, String argnames[]) throws ArrayIndexOutOfBoundsException {
 	List<String> parms = new LinkedList<String>();
