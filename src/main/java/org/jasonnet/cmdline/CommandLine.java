@@ -10,10 +10,10 @@ import java.util.LinkedList;
  * <pre>
  * Syntaxes:
  *
- * <code>---flag </code> a named flag
- * <code>---xx... </code> a commented out simple named flag
- * <code>--key value </code> a key value pair
- * <code>--xxkey value</code> a commented out key value pair
+ * <code>---flag </code>        a named flag 
+ * <code>---xx... </code>       a commented out named flag 
+ * <code>--key value </code>    a key value pair 
+ * <code>--xxkey value</code>   a commented out key value pair 
  * <code>-a</code> (or <code>-abc</code>) single-letter flag(s)
  * </pre>
  *
