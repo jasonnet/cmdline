@@ -12,9 +12,9 @@ import java.util.LinkedList;
  *
  * <code>---flag </code>        a named flag 
  * <code>---xx... </code>       a commented out named flag 
- * <code>--key value </code>    a key value pair 
+ * <code>--key value </code>    a key value pair (see GNU getopt_long() ) 
  * <code>--xxkey value</code>   a commented out key value pair 
- * <code>-a</code> (or <code>-abc</code>)    one (or more) single-letter flag(s) 
+ * <code>-a</code> (or <code>-abc</code>)    one (or more) single-letter flag(s) (see POSIX getopt) 
  * </pre>
  *
  * Everything else is an position-sensitive parameter.
