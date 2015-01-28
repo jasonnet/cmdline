@@ -22,6 +22,15 @@ import java.util.LinkedList;
  * parameters if the names of the positions is passed in to the
  * parser method.
  *
+ * Typical usage is:
+ * <pre>
+ * Map<String,String> hmNamedParameters = new HashMap<String,String>();
+ * String posparams[] = CommandLine.parse_command_args(argv, hmNamedParameters, null);
+ * if (hmNamedParameters.containsKey("--directory")) {
+ *   directory = hmNamedParameters.get("--directory");
+ * }
+ * </pre>
+ *
  * @author ccjason (12/15/2014)
  */
 public class CommandLine {
