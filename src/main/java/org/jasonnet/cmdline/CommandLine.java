@@ -7,8 +7,8 @@ import java.util.LinkedList;
  * part due to the fact that it supports a very simple command
  * line syntax convention.
  *
- * <pre>
  * Syntaxes:
+ * <pre>
  *
  * <code>---flag </code>        a named flag 
  * <code>---xx... </code>       a commented out named flag 
