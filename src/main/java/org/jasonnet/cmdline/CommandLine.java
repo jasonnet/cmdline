@@ -24,6 +24,7 @@ import java.util.LinkedList;
  *
  * Typical usage is:
  * <pre>
+ *
  * Map<String,String> hmNamedParameters = new HashMap<String,String>();
  * String posparams[] = CommandLine.parse_command_args(argv, hmNamedParameters, null);
  * if (hmNamedParameters.containsKey("--directory")) {
