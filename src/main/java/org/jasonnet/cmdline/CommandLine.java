@@ -32,7 +32,7 @@ import java.util.LinkedList;
  * }
  * </pre>
  *
- * @author ccjason (12/15/2014)
+ * @author jasonnet (12/15/2014)
  */
 public class CommandLine {
     public static final String NAME_TOOMANYARGUMENTS = "_too_many_arguments_to_many_arguments";
@@ -41,7 +41,7 @@ public class CommandLine {
      * from the command line and an ordered array of
      * position-sensitive parameter values.
      *
-     * @author ccjason (12/15/2014)
+     * @author jasonnet (12/15/2014)
      *
      * @param args the array of strings passed to the main method
      * @param mapOptions a map to which this method will add found
